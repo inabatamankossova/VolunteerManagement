@@ -15,7 +15,7 @@ WHERE volunteerId = (
     WHERE email = 'aruzhan@gmail.com'
 );
 
-
+-- 3. UPDATE: Хабарламаны оқылған деп белгілеу
 UPDATE Notification
 SET status = 'Read'
 WHERE volunteerId = (
@@ -27,4 +27,17 @@ WHERE volunteerId = (
 -- Нәтижелерді тексеру
 SELECT * FROM Volunteer;
 SELECT * FROM Application;
+SELECT * FROM Notification;
+
+-- Жаңа тест хабарламасын енгізу
+INSERT INTO Notification (volunteerId, message)
+SELECT volunteerId, N'Тест хабарлама'
+FROM Volunteer
+WHERE email = 'aruzhan@gmail.com';
+
+-- Тест хабарламасын өшіру
+DELETE FROM Notification
+WHERE message = N'Тест хабарлама';
+
+-- Нәтижені тексеру
 SELECT * FROM Notification;
