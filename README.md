@@ -55,9 +55,5 @@
 
 ## Қолданылатын технологиялар
 
-- SQL Server
-- Visual Studio Code
-- Git
-- GitHub
 
 тест
